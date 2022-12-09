@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: lightgreen;
+}
+
+#container {
+    height: 500px;
+    width: 800px;
+    position: relative;
+    border: 5px solid pink;
+    overflow: hidden;
+    background: yellow;
+}
+
+#slider {
+    height: 450px;
+    width: 4000px;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+b{
+    color: #ffff;
+    margin-left: 35px; 
+}
+
+.images,
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 450px;
+    width: 800px;
+}
+
+.images:nth-child(1) {
+    left: 0px;
+}
+
+.images:nth-child(2) {
+    left: 800px;
+}
+
+.images:nth-child(3) {
+    left: 1600px;
+}
+
+.images:nth-child(4) {
+    left: 2400px;
+}
+
+.images:nth-child(5) {
+    left: 3200px;
+}
+
+.images:nth-child(6) {
+    left: 4000px;
+}
+
+.btn {
+    height: 16px;
+    width: 80px;
+    background: #31363c;
+    display: block;
+    position: absolute;
+    bottom: 13px;
+    cursor: pointer;
+    z-index: 999;
+    border-radius: 10px 0px;
+}
+
+.no1 {
+    left: 100px;
+}
+
+.no2 {
+    left: 200px;
+}
+
+.no3 {
+    left: 300px;
+}
+
+.no4 {
+    left: 400px;
+}
+
+.no5 {
+    left: 500px;
+}
+
+.no6 {
+    left: 600px;
+}
+
+#image1:checked ~ .no1,
+#image2:checked ~ .no2,
+#image3:checked ~ .no3,
+#image4:checked ~ .no4,
+#image5:checked ~ .no5,
+#image6:checked ~ .no6 {
+    background: #3630d4;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#image1:checked ~ #slider {
+    left: 0;
+}
+
+#image2:checked ~ #slider {
+    left: -800px;
+}
+
+#image3:checked ~ #slider {
+    left: -1600px;
+    ;
+}
+
+#image4:checked ~ #slider {
+    left: -2400px;
+}
+
+#image5:checked ~ #slider {
+    left: -3200px;
+}
+
+#image6:checked ~ #slider {
+    left: -4000px;
+}
